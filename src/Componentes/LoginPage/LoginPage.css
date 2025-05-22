@@ -1,0 +1,12 @@
+.bg{
+    background-image: url('/src/assets/fachada3.png');
+    background-size: cover;
+    overflow: hidden;
+     
+}
+.logo img{
+height: auto;
+  max-height: 60px;
+  vertical-align: middle;
+
+};

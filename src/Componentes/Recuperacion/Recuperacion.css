@@ -1,0 +1,147 @@
+.recuperacion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ocupa al menos el 100% de la altura de la ventana */
+  padding: 1rem; /* Espaciado para pantallas pequeñas */
+  background-color: #f0f2f5; /* Un fondo claro para la página */
+  font-family: 'Inter', sans-serif; /* Consistencia de fuente, si usas Inter */
+  overflow: hidden; /* Asegura que no haya scrollbars si el contenido es muy alto */
+}
+
+/* Estilos de la tarjeta (card) principal del formulario */
+.recuperacion-card {
+  background-color: white;
+  padding: 2.5rem; /* Relleno interno generoso */
+  border-radius: 0.75rem; /* Bordes ligeramente más redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada, consistente con el formulario de login */
+  width: 100%;
+  max-width: 500px; /* Ancho máximo para la tarjeta */
+  text-align: center; /* Centra el texto dentro de la tarjeta */
+}
+
+/* Título del formulario */
+.recuperacion-title {
+  color: #0047ab; /* Color principal azul, consistente con tu login */
+  font-size: 2.25rem; /* Tamaño de fuente más grande para el título */
+  font-weight: bold;
+  margin-bottom: 2rem; /* Margen inferior */
+}
+
+/* Estilos generales del formulario (aplicados a UsernameForm y SecurityQuestionsForm) */
+.recuperacion-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Espacio entre los elementos del formulario */
+}
+
+/* Estilos de los campos de entrada */
+.recuperacion-form .form-floating {
+  margin-bottom: 0; /* Eliminamos el margen inferior si ya usamos gap en el formulario */
+}
+
+.recuperacion-form .form-control {
+  border: 1px solid #ccc; /* Borde más suave */
+  border-radius: 0.25rem; /* Radio de borde predeterminado de Bootstrap */
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave al enfocar */
+}
+
+/* Estilos de los campos de entrada al enfocarlos */
+.recuperacion-form .form-control:focus {
+  border-color: #0047ab; /* Color de enfoque, consistente con tu login */
+  box-shadow: 0 0 0 0.25rem rgba(0, 71, 171, 0.25); /* Sombra de enfoque */
+  outline: none; /* Elimina el contorno por defecto del navegador */
+}
+
+/* Estilos de las etiquetas flotantes (labels) */
+.recuperacion-form .form-floating > label {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #777; /* Color de etiqueta más tenue, consistente con tu login */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave al flotar */
+}
+
+/* Ajuste para el comportamiento de la etiqueta flotante en Bootstrap 5 */
+.recuperacion-form .form-floating > .form-control:not(:placeholder-shown) ~ label,
+.recuperacion-form .form-floating > .form-control:focus ~ label {
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+  opacity: 0.65;
+}
+
+/* Estilos del botón principal (Continuar / Verificar Respuestas) */
+.recuperacion-form .btn-primary,
+.recuperacion-form .btn-success {
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: 100%; /* Asegura que los botones ocupen todo el ancho */
+}
+
+.recuperacion-form .btn-primary {
+  background-color: #0047ab; /* Color principal, consistente con tu login */
+  border-color: #0047ab;
+}
+
+.recuperacion-form .btn-primary:hover {
+  background-color: #003b8d; /* Tono más oscuro al pasar el ratón */
+  border-color: #003b8d;
+}
+
+.recuperacion-form .btn-success {
+  background-color: #28a745; /* Color verde de éxito de Bootstrap */
+  border-color: #28a745;
+}
+
+.recuperacion-form .btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* Estilos del botón de enlace (Volver al inicio) */
+.recuperacion-form .btn-link {
+  color: #0047ab; /* Color principal */
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0.5rem; /* Pequeño margen superior */
+}
+
+.recuperacion-form .btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para mensajes de éxito/error */
+.recuperacion-message {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  text-align: left; /* Alinea el texto del mensaje a la izquierda */
+}
+
+.recuperacion-message.success {
+  background-color: #d4edda; /* Fondo verde claro */
+  color: #155724; /* Texto verde oscuro */
+  border: 1px solid #c3e6cb;
+}
+
+.recuperacion-message.error {
+  background-color: #f8d7da; /* Fondo rojo claro */
+  color: #721c24; /* Texto rojo oscuro */
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsividad básica para pantallas más pequeñas */
+@media (max-width: 576px) {
+  .recuperacion-card {
+    padding: 1.5rem; /* Menos padding en móviles */
+    border-radius: 0.5rem;
+  }
+
+  .recuperacion-title {
+    font-size: 1.75rem; /* Título más pequeño en móviles */
+  }
+}

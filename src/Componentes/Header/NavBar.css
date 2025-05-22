@@ -1,0 +1,93 @@
+/* Custom CSS for hover dropdowns */
+/* Aplica solo para pantallas grandes (lg y superiores) */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block; /* Muestra el menú desplegable al pasar el ratón */
+  }
+}
+
+/* Base styles for the navbar */
+.navbar {
+  background-color: rgb(255, 255, 255); /* Fondo blanco */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgb(248, 6, 6);
+  /* Bootstrap's .navbar, .d-flex, .justify-content-between handle display, align-items, justify-content */
+}
+
+/* Styles for the brand (logo) */
+.navbar-brand {
+  display: flex; /* Asegura flex para la alineación interna del logo si es necesario */
+  align-items: center; /* Alinea verticalmente el contenido del logo */
+  text-decoration: none;
+  /* El margen a la derecha se gestiona con utilidades de Bootstrap en el JSX (ej. me-auto) */
+}
+
+.navbar-brand img {
+  height: auto;
+  max-height: 30px;
+  vertical-align: middle;
+}
+
+/* Styles for navigation links (general) */
+/* Aumenta la especificidad para los enlaces dentro de la barra de navegación */
+.navbar-nav .nav-item .nav-link {
+  color: gray; /* Color por defecto para todos los enlaces de navegación */
+  text-decoration: none; /* Elimina el subrayado por defecto */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #000; /* Color al pasar el ratón */
+}
+
+/* Estilos para el texto de usuario */
+.navbar-text { /* Clase de Bootstrap para texto no enlazado en el navbar */
+  color: #555; /* Color del texto de usuario */
+  font-weight: bold;
+  white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+/* Styles for the toggler button */
+.navbar-toggler {
+  border-color: #ccc;
+  /* El margen es gestionado por Bootstrap */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' fill='currentColor' xmlns='[http://www.w3.org/2000/svg'%3e%3cpath](http://www.w3.org/2000/svg'%3e%3cpath) stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* --- Estilos para el Modal de Confirmación de Cierre de Sesión --- */
+.logout-confirm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* Por encima de otros elementos de Bootstrap como el navbar */
+}
+
+.logout-confirm-modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  width: 90%; /* Responsivo */
+}
+
+.logout-confirm-modal-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.logout-confirm-modal-content .modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espacio entre los botones */
+}
