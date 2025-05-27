@@ -3,7 +3,6 @@ import logoSeniat from '../../assets/logo-seniat.png'; // Tu logo
 import './NavBar.css'; // Tu CSS personalizado
 import { Link, useNavigate } from 'react-router-dom'; // Para la navegación
 
-
 function NavBar() {
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false); // Estado para mostrar/ocultar el modal de confirmación
   const navigate = useNavigate(); // Hook para la navegación programática
@@ -27,12 +26,6 @@ function NavBar() {
   };
 
   const User = 'Admin';
-
-  // Función para navegar a páginas PHP
-  const navigateToPHP = (page) => {
-    window.location.href = `/${page}.php`;
-  };
-
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
@@ -64,11 +57,11 @@ function NavBar() {
             </li>
             {/* Registro con Dropdown */}
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" href="#" id="registroDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Link className="nav-link dropdown-toggle" to="/HomePage" id="registroDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Registro
               </Link>
               <ul className="dropdown-menu" aria-labelledby="registroDropdown">
-                <li><Link className="dropdown-item" to="/Consignatario">Consignatario</Link></li>
+                <li><Link className="dropdown-item" to="/registro/opcionA">Opción Registro A</Link></li>
                 <li><Link className="dropdown-item" to="/registro/opcionB">Opción Registro B</Link></li>
               </ul>
             </li>

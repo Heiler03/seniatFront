@@ -4,6 +4,7 @@ import './App.css';
 import LoginPage from '../src/Componentes/LoginPage/LoginPage';
 import Recuperacion from '../src/Componentes/Recuperacion/Recuperacion'
 import HomePage from '../src/Componentes/HomePage/HomePage';
+import ConsultaForm from './Componentes/ConsultForm/ConsultForm';
 
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
 
           {/* Ruta para la página de inicio */}
            <Route path="/HomePage" element={<HomePage />} />
+
+           {/* Ruta para la página de inicio */}
+           <Route path="/Consignatario" element={<ConsultaForm/>} />
+
         </Routes>
       </div>
      
