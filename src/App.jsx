@@ -5,6 +5,7 @@ import LoginPage from '../src/Componentes/LoginPage/LoginPage';
 import Recuperacion from '../src/Componentes/Recuperacion/Recuperacion'
 import HomePage from '../src/Componentes/HomePage/HomePage';
 import ConsultaForm from './Componentes/ConsultForm/ConsultForm';
+import Prueba from './pruebas/prueba';
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
 
            {/* Ruta para la página de inicio */}
            <Route path="/Consignatario" element={<ConsultaForm/>} />
+
+            {/* Ruta para la página de preuba*/}
+           <Route path="/prueba" element={<Prueba/>} />
 
         </Routes>
       </div>

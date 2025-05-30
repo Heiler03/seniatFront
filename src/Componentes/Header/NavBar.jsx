@@ -78,7 +78,7 @@ function NavBar() {
                 Consulta
               </Link>
               <ul className="dropdown-menu" aria-labelledby="consultaDropdown">
-                <li><Link className="dropdown-item" to="/consulta/item1">Opción Consulta 1</Link></li>
+                <li><Link className="dropdown-item" to="/prueba">prueba</Link></li>
                 <li><Link className="dropdown-item" to="/consulta/item2">Opción Consulta 2</Link></li>
               </ul>
             </li>
